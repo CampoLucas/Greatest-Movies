@@ -8,6 +8,9 @@
         { src: './assets/media/movies/rocketman/front02.jpg', title: 'Rocketman' },
         { src: './assets/media/movies/rocketman/front03.jpg', title: 'Rocketman' },
         { src: './assets/media/movies/rocketman/front04.jpg', title: 'Rocketman' },
+        { src: './assets/media/movies/back-to-the-future/front01.jpg', title: 'Back To The Future' },
+        { src: './assets/media/movies/back-to-the-future/front02.jpg', title: 'Back To The Future' },
+        { src: './assets/media/movies/back-to-the-future/front03.jpg', title: 'Back To The Future' },
     ];
 
     function pickRandom(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
