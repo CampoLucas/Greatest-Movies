@@ -25,9 +25,12 @@ div.scrollmenu a.cover {
     color: white;
     text-align: center;
     padding: 14px;
+    margin: 3px;
     text-decoration: none;
     vertical-align: top;
     background-color: #444;
+    border-radius: 5px;
+    
 }
 
 div.scrollmenu a.cover:hover {
