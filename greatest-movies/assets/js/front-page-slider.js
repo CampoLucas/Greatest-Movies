@@ -11,6 +11,12 @@
         { src: './assets/media/movies/back-to-the-future/front01.jpg', title: 'Back To The Future' },
         { src: './assets/media/movies/back-to-the-future/front02.jpg', title: 'Back To The Future' },
         { src: './assets/media/movies/back-to-the-future/front03.jpg', title: 'Back To The Future' },
+        { src: './assets/media/movies/django/front01.jpg', title: 'Django' },
+        { src: './assets/media/movies/django/front02.jpg', title: 'Django' },
+        { src: './assets/media/movies/django/front03.jpg', title: 'Django' },
+        { src: './assets/media/movies/ford-v-ferrari/front01.jpg', title: 'Forc v Ferrari' },
+        { src: './assets/media/movies/ford-v-ferrari/front02.jpg', title: 'Forc v Ferrari' },
+        { src: './assets/media/movies/ford-v-ferrari/front03.jpg', title: 'Forc v Ferrari' },
     ];
 
     function pickRandom(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
