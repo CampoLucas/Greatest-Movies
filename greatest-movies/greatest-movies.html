@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Movies</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/front-page-slider.js"></script>
+    <script src="./assets/js/nav-scroll-effect.js"></script>
 </head>
 <body>
     
     <header>
         <nav class="topnav">
             <a class="active" href="../index.html">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -22,14 +25,13 @@
                 <div class="front-page-content">
                     <h1 class="site-title">Greatest Movies</h1>
                     <p id="front-page-movie" class="featured-movie" aria-live="polite"></p>
-                    <!-- Add more elements here in future (buttons, links, badges) -->
                 </div>
             </div>
         </section>
 
 
         <section>
-            <h3>Top 9</h3>
+            <h2 style="padding-left: 15px; color: white;">My Top 9</h2>
             <div class="scrollmenu">
                 <a class="cover" href="#the-shining">
                     <div class="thumb">
@@ -98,51 +100,27 @@
         </section>
     </main>
 
-    <footer>
-        <h3>Footer</h3>
+    <footer class="site-footer">
+        <div class="footer-inner" id="contact">
+            <div class="footer-brand">
+                <h3 class="footer-title">Greatest Movies</h3>
+                <p class="footer-sub">By Lucas Campo</p>
+            </div>
+
+            <div class="footer-contacts" role="contentinfo">
+                <div class="social">
+                    <a class="icon linkedin social-link" href="https://www.linkedin.com/in/lucascampo3333/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"></a>
+                    <a class="icon email social-link" href="mailto:campolucas2001@gmail.com" aria-label="Send email"></a>
+                </div>
+
+                <div class="contact-info">
+                    <a href="mailto:campolucas2001@gmail.com" class="contact-link">campolucas2001@gmail.com</a>
+                    <span class="contact-sep">•</span>
+                    <a href="tel:+1234567890" class="contact-link">+54 11 2740-3576</a>
+                </div>
+            </div>
+        </div>
     </footer>
-
-    
-    
-    <script>
-        
-        
-        /* Hero slider: pick a random slide on each page load */
-        (function(){
-            const slides = [
-                { src: './assets/media/movies/the-shining/front01.jpg', title: 'The Shining' },
-                // { src: './assets/media/movies/the-shining/front02.jpg', title: 'The Shining' },
-                // { src: './assets/media/movies/the-shining/front03.jpg', title: 'The Shining' },
-                // { src: './assets/media/movies/the-shining/front04.jpg', title: 'The Shining' },
-                // { src: './assets/media/movies/rocketman/front01.jpg', title: 'Rocketman' },
-            ];
-
-            function pickRandom(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
-
-            document.addEventListener('DOMContentLoaded', function(){
-                const front = document.getElementById('front-page-slider');
-                if(!front) return;
-                const chosen = pickRandom(slides);
-                front.style.backgroundImage = `url("${chosen.src}")`;
-                const movieEl = document.getElementById('front-page-movie');
-                if(movieEl) movieEl.textContent = chosen.title;
-            });
-        })();
-
-        /* Navbar scroll state: toggle .scrolled when page is not at top */
-        (function(){
-            const nav = document.querySelector('.topnav');
-            if(!nav) return;
-            function updateNav(){
-                if(window.scrollY > 8) nav.classList.add('scrolled');
-                else nav.classList.remove('scrolled');
-            }
-            window.addEventListener('scroll', updateNav, { passive: true });
-            document.addEventListener('DOMContentLoaded', updateNav);
-            // run immediately in case DOMContentLoaded already fired
-            updateNav();
-        })();
-    </script>
 
 </body>
 </html>
