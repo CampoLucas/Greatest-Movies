@@ -1,3 +1,11 @@
+:root {
+    --page-bg: rgb(20, 20, 20);
+    --nav-height: 64px;
+    --nav-bg-scroll: linear-gradient(to bottom, rgb(0, 0, 0), var(--page-bg));
+    /* --nav-bg-scroll: rgba(var(28, 28, 28, .5)); */
+    --nav-bg: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0,0,0,0));
+}
+
 body {
     margin: 0;
     /* font-family: Arial, Helvetica, sans-serif; */
@@ -17,7 +25,7 @@ div.scrollmenu {
     padding: 8px;
 }
 
-div.scrollmenu a.cover {
+a.cover {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -33,12 +41,12 @@ div.scrollmenu a.cover {
     
 }
 
-div.scrollmenu a.cover:hover {
+a.cover:hover {
     background-color: #777;
 }
 
 
-div.scrollmenu a.cover .thumb {
+a.cover .thumb {
     width: 267px; 
     height: 400px; 
     overflow: hidden;
@@ -49,7 +57,7 @@ div.scrollmenu a.cover .thumb {
 }
 
 
-div.scrollmenu a.cover .thumb img {
+a.cover .thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -59,11 +67,11 @@ div.scrollmenu a.cover .thumb img {
 }
 
 
-div.scrollmenu a.cover:hover .thumb img {
+a.cover:hover .thumb img {
     transform: scale(1.1);
 }
 
-div.scrollmenu a.cover .text {
+a.cover .text {
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: 700; 
@@ -72,25 +80,48 @@ div.scrollmenu a.cover .text {
     color: #ffffff;
 }
 
-div.scrollmenu a.cover:hover .text {
+a.cover:hover .text {
     color: #3f3f3f;
 }
 
-div.scrollmenu a.cover .release-year{
+a.cover .release-year{
     color: #bdbdbd; 
     font-size: 0.9rem;
     margin-top: 2px;
     font-weight: 500;
 }
 
-/* Top nav bar styles */
-
-:root {
-    --nav-height: 64px;
-    --nav-bg-scroll: linear-gradient(to bottom, rgb(0, 0, 0), var(--page-bg));
-    /* --nav-bg-scroll: rgba(var(28, 28, 28, .5)); */
-    --nav-bg: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0,0,0,0));
+a.cover .genre{
+    color: #bdbdbd; 
+    font-size: 0.9rem;
+    margin-top: 2px;
+    font-weight: 500;
 }
+
+@media (max-width: 640px){
+    a.cover .thumb {
+        width: 133px;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    a.cover {
+        padding: 10px;
+        margin: 2px;
+        padding: 5px;
+    }
+
+    a.cover .text {
+        display: none;
+        font-size: 0.9rem;
+    }
+
+    a.cover .release-year {
+        font-size: 0.8rem;
+    }
+}
+
+/* Top nav bar styles */
 
 .topnav {
     position: fixed;
@@ -182,10 +213,6 @@ div.scrollmenu a.cover .release-year{
 
 
 /* Front page styles */
-
-:root {
-    --page-bg: rgb(28, 28, 28);
-}
 
 .front-page-slider {
     height: 100vh;
