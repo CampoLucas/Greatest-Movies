@@ -136,9 +136,35 @@
         </div>
     </footer>
 
-    
+    <!-- Movie modal (reused for every movie) -->
+    <div id="movie-modal" class="movie-modal">
+        <div class="movie-modal-content" role="dialog" aria-modal="true">
+            <button class="movie-close" aria-label="Close popup">&times;</button>
+            <div id="movie-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Template for the popup -->
+    <template id="movie-popup-template">
+        <article class="movie-popup">
+            <div class="movie-popup-image-wrap">
+                <img class="movie-popup-image" src="" alt="">
+            </div>
+            <div class="movie-popup-text">
+                <h2 class="movie-popup-title"></h2>
+                <p class="movie-popup-year"></p>
+                <p class="movie-popup-description"></p>
+            </div>
+
+        </article>
+
+    </template>
+
+    <script src="./assets/js/movies/popups.js"></script>
+    <script src="./assets/js/movies/movies.js"></script>
     <script src="./assets/js/front-page-slider.js"></script>
     <script src="./assets/js/nav-scroll-effect.js"></script>
     <script src="./assets/js/movie-slider.js"></script>
+    <script src="./assets/js/movie-popup.js"></script>
 </body>
 </html>
